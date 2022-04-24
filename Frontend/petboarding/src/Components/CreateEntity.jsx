@@ -6,9 +6,9 @@ export const Createentity = () => {
     City: "",
     Address: "",
     Capacity: "",
-    CostperDay: "",
+    Costperday: "",
     Verified: "",
-    Rating: "",
+    Ratings: "",
   });
 
   const handleChange = (e) => {
@@ -68,19 +68,28 @@ export const Createentity = () => {
       <br />
       <input
         type="text"
-        name="CostperDay"
+        name="Costperday"
         placeholder="Enter cost per day"
-        value={userdetails.CostperDay}
+        value={userdetails.Costperday}
         onChange={(e) => handleChange(e)}
       />
       <br />
       <input
         type="text"
-        name="Rating"
-        placeholder="Enter ratings"
-        value={userdetails.Rating}
+        name="Verified"
+        placeholder="Verified?"
+        value={userdetails.Verified}
         onChange={(e) => handleChange(e)}
       />
+      <br />
+      <input
+        type="text"
+        name="Ratings"
+        placeholder="Enter ratings"
+        value={userdetails.Ratings}
+        onChange={(e) => handleChange(e)}
+      />
+      <br />
       <br />
       <button onClick={handlesubmit}>Submit</button>
     </div>

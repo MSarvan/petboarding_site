@@ -16,28 +16,35 @@ export const Home = () => {
 
   const handleSort = () => {
     let temp = [...data];
-    temp.sort((a, b) => a.CostPerDay - b.CostPerDay);
+    temp.sort((a, b) => a.Costperday - b.Costperday);
     setSortdata(temp);
   };
-  const handleRating = () => {
+  const handleRatings = () => {
     let temp = [...data];
-    temp.sort((a, b) => b.Rating - a.Rating);
+    temp.sort((a, b) => b.Ratings - a.Ratings);
     setSortdata(temp);
   };
   const handleVerified = () => {
     let temp = data.filter((e) => e.Verified == "true");
     setSortdata(temp);
   };
+  const handleCity = (val) => {
+    let temp = data.filter((e) => e.City == val);
+    setSortdata(temp);
+  };
 
   return (
     <div>
       <h2>Home</h2>
-      <button onClick={handleSort}>Sort by Costperday</button>
-      <button onClick={handleRating}>Sort by Rating</button>
+      <button onClick={handleSort}>Sort by Cost per day</button>
+      <button onClick={handleRatings}>Sort by Ratings</button>
       <button onClick={handleVerified}>Filter by Verified</button>
-      <button>Filter by City</button>
+      <br /><br />
+      <input type="text" placeholder="Enter City"/>
+      <button onClick={(e) => handleCity(e)}>Filter by City</button>
+      <br /><br />
 
-      <table style={{ border: "1.5px solid black" }}>
+      <table style={{ border: "1.5px solid black", margin: "auto" }}>
         <thead>
           <tr>
             <th style={{ border: "1px solid gray" }}>S.No</th>
