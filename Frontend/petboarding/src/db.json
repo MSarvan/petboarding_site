@@ -90,6 +90,16 @@
       "Ratings": "3.75",
       "CostperDay": "5",
       "id": 9
+    },
+    {
+      "Name": "vijay",
+      "City": "tiruppur",
+      "Address": "28/26B",
+      "Capacity": "24",
+      "Costperday": "452",
+      "Verified": "true",
+      "Ratings": "5",
+      "id": 10
     }
   ]
 }

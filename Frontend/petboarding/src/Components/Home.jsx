@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export const Home = () => {
   const [data, setData] = useState([]);
   const [sortdata, setSortdata] = useState([]);
+  const [cityinput, setCityinput] = useState("");
 
   useEffect(() => {
     fetch(`http://localhost:6789/details`)
@@ -28,8 +29,8 @@ export const Home = () => {
     let temp = data.filter((e) => e.Verified == "true");
     setSortdata(temp);
   };
-  const handleCity = (val) => {
-    let temp = data.filter((e) => e.City == val);
+  const handleCity = () => {
+    let temp = data.filter((e) => e.City == cityinput);
     setSortdata(temp);
   };
 
@@ -40,8 +41,8 @@ export const Home = () => {
       <button onClick={handleRatings}>Sort by Ratings</button>
       <button onClick={handleVerified}>Filter by Verified</button>
       <br /><br />
-      <input type="text" placeholder="Enter City"/>
-      <button onClick={(e) => handleCity(e)}>Filter by City</button>
+      <input type="text" placeholder="Enter City" value={cityinput} onChange={(e) => setCityinput(e.target.value)}/>
+      <button onClick={handleCity}>Filter by City</button>
       <br /><br />
 
       <table style={{ border: "1.5px solid black", margin: "auto" }}>
