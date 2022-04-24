@@ -1,0 +1,55 @@
+{
+    "details": [
+      {
+        "Name": "Saravana",
+        "City": "Salem",
+        "Address": "Mettur",
+        "Capacity": "25",
+        "CostPerDay": "250",
+        "Verified": "false",
+        "Rating": "3.4",
+        "id": 1
+      },
+      {
+        "Name": "Saro",
+        "City": "Salem",
+        "Address": "Mettur",
+        "Capacity": "250",
+        "CostPerDay": "1000",
+        "Verified": "true",
+        "Rating": "4.3",
+        "id": 2
+      },
+      {
+        "Name": "Sarvan",
+        "City": "Salem",
+        "Address": "Mettur",
+        "Capacity": "500",
+        "CostPerDay": "300",
+        "Verified": "true",
+        "Rating": "3.8",
+        "id": 3
+      },
+      {
+        "Name": "Saravanan M.",
+        "City": "Salem",
+        "Address": "Mettur",
+        "Capacity": "500",
+        "CostPerDay": "450",
+        "Verified": "false",
+        "Rating": "4.5",
+        "id": 4
+      },
+      {
+        "Name": "Saro_lm",
+        "City": "Salem",
+        "Address": "Mettur",
+        "Capacity": "350",
+        "CostPerDay": "1500",
+        "Verified": "true",
+        "Rating": "3.6",
+        "id": 5
+      }
+    ]
+  }
+  
