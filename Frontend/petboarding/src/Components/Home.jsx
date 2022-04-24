@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export const Home = () => {
-
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [sortdata, setSortdata] = useState([]);
 
   useEffect(() => {
@@ -29,18 +28,14 @@ export const Home = () => {
     let temp = data.filter((e) => e.Verified == "true");
     setSortdata(temp);
   };
-  const handleReset = () => {
-    setSortdata(data);
-  };
 
-    return (
-        <div>
-        <h2>Home</h2>
+  return (
+    <div>
+      <h2>Home</h2>
       <button onClick={handleSort}>Sort by Costperday</button>
       <button onClick={handleRating}>Sort by Rating</button>
       <button onClick={handleVerified}>Filter by Verified</button>
       <button>Filter by City</button>
-      <button onClick={handleReset}>Reset</button>
 
       <table style={{ border: "1.5px solid black" }}>
         <thead>
@@ -63,13 +58,13 @@ export const Home = () => {
               <td style={{ border: "1px solid gray" }}>{e.City}</td>
               <td style={{ border: "1px solid gray" }}>{e.Address}</td>
               <td style={{ border: "1px solid gray" }}>{e.Capacity}</td>
-              <td style={{ border: "1px solid gray" }}>{e.CostPerDay}</td>
+              <td style={{ border: "1px solid gray" }}>{e.Costperday}</td>
               <td style={{ border: "1px solid gray" }}>{e.Verified}</td>
-              <td style={{ border: "1px solid gray" }}>{e.Rating}</td>
+              <td style={{ border: "1px solid gray" }}>{e.Ratings}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-    )
-}
+  );
+};
